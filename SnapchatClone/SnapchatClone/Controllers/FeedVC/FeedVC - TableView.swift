@@ -20,12 +20,6 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath)
             as! FeedTableViewCell
-        
-        for subview in cell.contentView.subviews {
-            subview.removeFromSuperview()
-        }
-        
-        cell.awakeFromNib()
 
         cell.senderLabel?.text = arrayOfSnaps[index].sender
         cell.dateSentLabel?.text = formatter.string(from: arrayOfSnaps[index].timeSent)

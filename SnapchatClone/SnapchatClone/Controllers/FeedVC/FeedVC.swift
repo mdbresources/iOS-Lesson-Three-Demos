@@ -21,10 +21,7 @@ class FeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupArrayOfSnaps()
-        setupCountLabel()
         setupNavigationBar()
-        // Do any additional setup after loading the view.
-        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,15 +48,6 @@ class FeedVC: UIViewController {
         }
     }
     
-    func setupTableView() {
-        tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 50))
-        tableView.center = CGPoint.init(x: view.frame.width/2, y: view.frame.height/2)
-        tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "feedCell")
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.view.addSubview(tableView)
-    }
-    
     // DEMO FUNCTION 3
     @objc func logOut() {
         do {
@@ -83,4 +71,16 @@ class FeedVC: UIViewController {
         } 
     }
 
+    func setupNavigationBar() {
+        navigationController?.navigationBar.tintColor = UIColor(r: 0, g: 188, b: 255)
+    
+        navigationItem.title = "My Snaps"
+        navigationController?.navigationBar.barTintColor = UIColor(r: 0, g: 188, b: 255)
+        navigationItem.setHidesBackButton(true, animated:true);
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Friends List", style: .plain, target: self, action: #selector(friendsListPressed))
+        navigationItem.rightBarButtonItem?.tintColor = .black
+
+    }
 }

@@ -25,8 +25,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(r: 255, g: 254, b: 0)
-        nameTextField.isHidden = true
-        phoneNumberTextField.isHidden = true
+        loginRegisterSegControl.selectedSegmentIndex = 1
     }
     
     // DEMO FUNCTION 2
