@@ -43,7 +43,7 @@ class FeedVC: UIViewController {
                                  Date(timeIntervalSince1970: 200000000),
                                  Date(timeIntervalSince1970: 2000000000),]
         for i in 0 ..< imageNames.count {
-            var si = SnapImage(sentBy: sentBy[i], sentTo: "Me", timeSent: timeSent[i], image: UIImage(named: imageNames[i])!)
+            let si = SnapImage(sentBy: sentBy[i], sentTo: "Me", timeSent: timeSent[i], image: UIImage(named: imageNames[i])!)
             arrayOfSnaps.append(si)
         }
     }
@@ -66,7 +66,7 @@ class FeedVC: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "toShowImage" {
-            var destination = segue.destination as! ShowImageVC
+            let destination = segue.destination as! ShowImageVC
             destination.snapImage = selectedImage
         } 
     }

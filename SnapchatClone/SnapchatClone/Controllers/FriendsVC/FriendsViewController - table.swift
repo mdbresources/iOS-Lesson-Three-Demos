@@ -14,7 +14,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var index = indexPath.row
+        let index = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendsCell", for: indexPath)
             as! FriendsCell
         

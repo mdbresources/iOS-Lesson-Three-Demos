@@ -14,7 +14,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var index = indexPath[1]
+        let index = indexPath[1]
         // look at DateFormatter documentation to figure out how to convert a SnapImage.timeSent to a label's text
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -32,9 +32,9 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var index = indexPath[1]
-        var cellSelected = arrayOfSnaps[index]
-        var snapImage = SnapImage.init(sentBy: cellSelected.sender, sentTo: cellSelected.sentTo, timeSent: cellSelected.timeSent, image: cellSelected.image)
+        let index = indexPath[1]
+        let cellSelected = arrayOfSnaps[index]
+        let snapImage = SnapImage.init(sentBy: cellSelected.sender, sentTo: cellSelected.sentTo, timeSent: cellSelected.timeSent, image: cellSelected.image)
         arrayOfSnaps[index].opened = true
         selectedImage = snapImage
         performSegue(withIdentifier: "toShowImage", sender: self)

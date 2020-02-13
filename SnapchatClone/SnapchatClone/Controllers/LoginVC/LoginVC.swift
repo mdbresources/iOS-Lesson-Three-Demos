@@ -30,15 +30,15 @@ class LoginVC: UIViewController {
     
     // DEMO FUNCTION 2
     func handleLogin() {
-        var email = emailTextField.text!
-        var password = passwordTextField.text!
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
         let auth = Auth.auth()
         auth.signIn(withEmail: email, password: password) { (signedInUser, signInError) in
             guard signInError == nil else {
                 self.displayAlert(title: "Error", message: signInError.debugDescription)
                 return
             }
-            guard let user = signedInUser else {
+            guard let _ = signedInUser else {
                 self.displayAlert(title: "Error", message: "No user")
                 return
             }
@@ -48,10 +48,10 @@ class LoginVC: UIViewController {
     
     // DEMO FUNCTION 1
     func handleRegister() {
-        var name = nameTextField.text!
-        var number = phoneNumberTextField.text!
-        var email = emailTextField.text!
-        var password = passwordTextField.text!
+        let name = nameTextField.text!
+        let number = phoneNumberTextField.text!
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
         let auth = Auth.auth()
         auth.createUser(withEmail: email, password: password) { (user, error) in
             guard error == nil else {

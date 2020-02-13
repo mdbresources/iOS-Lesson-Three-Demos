@@ -30,7 +30,7 @@ class FriendsViewController: UIViewController {
                 print("friends error")
                 return
             }
-            for (userId, value) in usersDict {
+            for (userId, _) in usersDict {
                 guard let userInfoDict = usersDict[userId] else {
                     print("friends error 2")
                     continue
