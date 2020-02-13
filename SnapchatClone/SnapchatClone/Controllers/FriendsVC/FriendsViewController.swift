@@ -11,14 +11,13 @@ import Firebase
 
 class FriendsViewController: UIViewController {
 
-    var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var friendsList: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         friendsList = []
         setupFriendsList()
-        setupTableView()
         // Do any additional setup after loading the view.
     }
     
@@ -50,22 +49,4 @@ class FriendsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.tintColor = UIColor(r: 0, g: 188, b: 255)
     }
-    
-    func setupTableView() {
-        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(FriendsCell.self, forCellReuseIdentifier: "friendsCell")
-        view.addSubview(tableView)
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

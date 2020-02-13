@@ -18,11 +18,6 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendsCell", for: indexPath)
             as! FriendsCell
         
-        for subview in cell.contentView.subviews {
-            subview.removeFromSuperview()
-        }
-        
-        cell.awakeFromNib()
         cell.nameLabel.text = friendsList[index]
         return cell
     }
