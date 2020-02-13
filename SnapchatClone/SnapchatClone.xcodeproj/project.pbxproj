@@ -15,7 +15,6 @@
 		1FEBE0CC23F4CABA008D6114 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBE0C623F4CABA008D6114 /* Utils.swift */; };
 		1FEBE0CF23F4CABA008D6114 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FEBE0C923F4CABA008D6114 /* GoogleService-Info.plist */; };
 		1FEC59C623F4CCB30070252F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC59B423F4CCB30070252F /* LoginVC.swift */; };
-		1FEC59C723F4CCB30070252F /* LoginVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC59B523F4CCB30070252F /* LoginVC - UISetup.swift */; };
 		1FEC59C823F4CCB30070252F /* FeedVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC59B723F4CCB30070252F /* FeedVC - UISetup.swift */; };
 		1FEC59C923F4CCB30070252F /* FeedVC - TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC59B823F4CCB30070252F /* FeedVC - TableView.swift */; };
 		1FEC59CA23F4CCB30070252F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC59B923F4CCB30070252F /* FeedVC.swift */; };
@@ -41,7 +40,6 @@
 		1FEBE0C623F4CABA008D6114 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1FEBE0C923F4CABA008D6114 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FEC59B423F4CCB30070252F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		1FEC59B523F4CCB30070252F /* LoginVC - UISetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC - UISetup.swift"; sourceTree = "<group>"; };
 		1FEC59B723F4CCB30070252F /* FeedVC - UISetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FeedVC - UISetup.swift"; sourceTree = "<group>"; };
 		1FEC59B823F4CCB30070252F /* FeedVC - TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FeedVC - TableView.swift"; sourceTree = "<group>"; };
 		1FEC59B923F4CCB30070252F /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				1FEC59B423F4CCB30070252F /* LoginVC.swift */,
-				1FEC59B523F4CCB30070252F /* LoginVC - UISetup.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -314,7 +311,6 @@
 				1FEC59C923F4CCB30070252F /* FeedVC - TableView.swift in Sources */,
 				1FEC59CC23F4CCB30070252F /* ShowImageVC - UISetup.swift in Sources */,
 				1FEC59D223F4CCB30070252F /* FeedTableViewCell.swift in Sources */,
-				1FEC59C723F4CCB30070252F /* LoginVC - UISetup.swift in Sources */,
 				1FEC59CD23F4CCB30070252F /* FriendsViewController.swift in Sources */,
 				1FEC59CF23F4CCB30070252F /* SnapImage.swift in Sources */,
 				1FEC59C823F4CCB30070252F /* FeedVC - UISetup.swift in Sources */,

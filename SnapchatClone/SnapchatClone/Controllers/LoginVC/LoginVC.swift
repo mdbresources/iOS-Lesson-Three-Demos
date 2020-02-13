@@ -10,25 +10,23 @@ import UIKit
 import Firebase
 
 class LoginVC: UIViewController {
-    var logoImageView: UIImageView!
-    var loginRegisterSegControl: UISegmentedControl!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var loginRegisterSegControl: UISegmentedControl!
     
-    var nameTextField: UITextField!
-    var phoneNumberTextField: UITextField!
-    var emailTextField: UITextField!
-    var passwordTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    var loginRegisterButton: UIButton!
+    @IBOutlet weak var loginRegisterButton: UIButton!
     
     var ourUserID: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(r: 255, g: 254, b: 0)
-        setupLogo()
-        setupSegControl()
-        setupLoginRegisterButton()
-        setupTextFields()
+        nameTextField.isHidden = true
+        phoneNumberTextField.isHidden = true
     }
     
     // DEMO FUNCTION 2
@@ -83,8 +81,12 @@ class LoginVC: UIViewController {
         navigationController?.navigationBar.isHidden = false
     }
     
-    @objc func handleLoginOrRegister() {
-        //loginRegisterButton.isUserInteractionEnabled = false
+    @IBAction func loginRegisterPressed(_ sender: Any) {
+        handleLoginOrRegister()
+    }
+    
+    func handleLoginOrRegister() {
+    //loginRegisterButton.isUserInteractionEnabled = false
         if loginRegisterSegControl.selectedSegmentIndex == 0 {
             handleLogin()
         } else {
@@ -99,7 +101,11 @@ class LoginVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @objc func handleLoginRegisterChange() {
+    @IBAction func handleLoginRegisterChange(_ sender: Any) {
+        handleLoginRegisterChange()
+    }
+    
+    func handleLoginRegisterChange() {
         let index = loginRegisterSegControl.selectedSegmentIndex
         let title = loginRegisterSegControl.titleForSegment(at: index)
         loginRegisterButton.setTitle(title, for: UIControl.State())

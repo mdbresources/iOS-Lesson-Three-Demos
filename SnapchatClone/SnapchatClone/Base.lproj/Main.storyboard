@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Yz-S7-p25">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Yz-S7-p25">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +14,94 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-h0-bHS">
+                                <rect key="frame" x="100" y="69" width="175" height="32"/>
+                                <segments>
+                                    <segment title="Login"/>
+                                    <segment title="Sign Up"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleLoginRegisterChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="kL0-zN-YqW"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZP-I5-b0C">
+                                <rect key="frame" x="20" y="597" width="335" height="45"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="838-SR-c4p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginRegisterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1n-Ez-aeR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-uh-sp8">
+                                <rect key="frame" x="25" y="370" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-wO-y9e">
+                                <rect key="frame" x="25" y="419" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-AI-390">
+                                <rect key="frame" x="25" y="468" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="out-IC-alw">
+                                <rect key="frame" x="25" y="517" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snapchat_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zjr-pI-UEn">
+                                <rect key="frame" x="68" y="150" width="239" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="VKP-CB-cd0"/>
+                                    <constraint firstAttribute="width" constant="239" id="sQB-On-vNl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fbe-uh-sp8" firstAttribute="top" secondItem="zjr-pI-UEn" secondAttribute="bottom" constant="30" id="64o-JM-Vjh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zjr-pI-UEn" secondAttribute="trailing" constant="68" id="6L9-V0-wLO"/>
+                            <constraint firstItem="OZP-I5-b0C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CfJ-0K-ff7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbe-uh-sp8" secondAttribute="trailing" constant="25" id="Exd-U7-wSn"/>
+                            <constraint firstItem="zjr-pI-UEn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="KXQ-Gu-tD1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ggX-AI-390" secondAttribute="trailing" constant="25" id="LHb-cE-dEz"/>
+                            <constraint firstItem="k5b-h0-bHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Muw-yl-Bcx"/>
+                            <constraint firstItem="fbe-uh-sp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Oth-9S-ZYm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OZP-I5-b0C" secondAttribute="bottom" constant="25" id="R74-Vl-1k2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DhY-wO-y9e" secondAttribute="trailing" constant="25" id="T1F-LB-7TC"/>
+                            <constraint firstItem="out-IC-alw" firstAttribute="top" secondItem="ggX-AI-390" secondAttribute="bottom" constant="15" id="cCI-Ry-cYn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5b-h0-bHS" secondAttribute="trailing" constant="100" id="gee-w9-tBO"/>
+                            <constraint firstItem="DhY-wO-y9e" firstAttribute="top" secondItem="fbe-uh-sp8" secondAttribute="bottom" constant="15" id="hG7-BV-pgj"/>
+                            <constraint firstItem="ggX-AI-390" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="inS-KT-oEj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OZP-I5-b0C" secondAttribute="trailing" constant="20" id="mhU-kp-oIH"/>
+                            <constraint firstItem="zjr-pI-UEn" firstAttribute="top" secondItem="k5b-h0-bHS" secondAttribute="bottom" constant="50" id="oHq-X7-sC9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="out-IC-alw" secondAttribute="trailing" constant="25" id="qao-h1-dEG"/>
+                            <constraint firstItem="DhY-wO-y9e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="rbJ-1m-oCN"/>
+                            <constraint firstItem="k5b-h0-bHS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="xF6-NC-psl"/>
+                            <constraint firstItem="out-IC-alw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="z0l-PW-3NJ"/>
+                            <constraint firstItem="ggX-AI-390" firstAttribute="top" secondItem="DhY-wO-y9e" secondAttribute="bottom" constant="15" id="zHp-1Y-n0A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="iTU-8t-76a"/>
                     <connections>
+                        <outlet property="emailTextField" destination="ggX-AI-390" id="Ape-U9-hak"/>
+                        <outlet property="loginRegisterButton" destination="OZP-I5-b0C" id="CMF-mJ-GDi"/>
+                        <outlet property="loginRegisterSegControl" destination="k5b-h0-bHS" id="nu4-EU-amH"/>
+                        <outlet property="logoImageView" destination="zjr-pI-UEn" id="C5n-Pa-VD9"/>
+                        <outlet property="nameTextField" destination="fbe-uh-sp8" id="1jm-R5-2dN"/>
+                        <outlet property="passwordTextField" destination="out-IC-alw" id="I3E-xS-S51"/>
+                        <outlet property="phoneNumberTextField" destination="DhY-wO-y9e" id="wyF-d7-xuQ"/>
                         <segue destination="PQH-Vk-0f5" kind="show" identifier="toMainFeed" id="SYH-QO-gaR"/>
                     </connections>
                 </viewController>
@@ -87,7 +167,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Yz-S7-p25" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d5f-bK-nCn">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -100,6 +180,9 @@
             <point key="canvasLocation" x="37.600000000000001" y="103.89805097451276"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Snapchat_Logo" width="480" height="480"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SYH-QO-gaR"/>
     </inferredMetricsTieBreakers>
